@@ -1,4 +1,4 @@
-##*Overshooting the Oracle: Why Zero Forget Accuracy Is the Wrong Target for Entangled Unlearning*.
+# *Overshooting the Oracle: Why Zero Forget Accuracy Is the Wrong Target for Entangled Unlearning*.
 
 | folder | dataset / model | forget request | settings |
 |---|---|---|---|
