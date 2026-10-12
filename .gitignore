@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# data, models and results are produced locally
+data/
+checkpoints/
+results/
+logs/
+figures*/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.u8
+*.tgz
+*.zip
+toxigen/unlearning-entanglement/
+sbic/sbic_work/
+vggface2/prep*/

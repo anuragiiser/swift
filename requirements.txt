@@ -1,0 +1,12 @@
+# tested: torch 2.2.2+cu121, torchvision 0.17.2, transformers 4.56.2, datasets 5.0.1, numpy 1.26.4
+torch>=2.2
+torchvision>=0.17
+transformers>=4.40,<4.57   # 4.57+ requires torch>=2.4
+datasets>=2.14
+numpy<2                    # required by torch 2.2; drop with torch>=2.4
+pandas
+scikit-learn
+matplotlib
+pillow
+tqdm
+# facenet-pytorch          # optional: only for vggface2 --arch inception_resnet_v1 (install with --no-deps)
