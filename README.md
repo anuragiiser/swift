@@ -2,10 +2,6 @@
 
 Code for the anonymous submission *Overshooting the Oracle: Why Zero Forget Accuracy Is the Wrong Target for Entangled Unlearning*.
 
-**Swift** matches the loss distribution of the forget set $D_f$ to that of a held-out calibration set $D_{cal}$
-(a stop-gradient counterfactual target), while a one-sided Wasserstein constraint keeps the retain set close to a
-cheap retain reference:
-
 | folder | dataset / model | forget request | settings |
 |---|---|---|---|
 | `cifar100/` | CIFAR-100, ResNet-18 | *aquarium fish* within the *fish* superclass | class, instance |
