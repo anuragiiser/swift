@@ -6,10 +6,6 @@ Code for the anonymous submission *Overshooting the Oracle: Why Zero Forget Accu
 (a stop-gradient counterfactual target), while a one-sided Wasserstein constraint keeps the retain set close to a
 cheap retain reference:
 
-\min_{\theta} W_2^2\left(P_\ell(D_f;\theta), \operatorname{sg}\left(P_\ell(D_{cal};\theta)\right)\right) + \lambda \left[W_2^2\left(P_\ell(D_r;\theta), \operatorname{sg}\left(P_\ell(D_r^{probe};\theta_r^{probe})\right)\right)\right]_+
-$\lambda$ is set by dual ascent against a tolerance calibrated to the sampling floor of the retain term, and the
-returned checkpoint is chosen by constrained selection on held-out slices (never on the retrained model).
-
 | folder | dataset / model | forget request | settings |
 |---|---|---|---|
 | `cifar100/` | CIFAR-100, ResNet-18 | *aquarium fish* within the *fish* superclass | class, instance |
