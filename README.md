@@ -1,14 +1,24 @@
 # Swift: counterfactual targets for entangled machine unlearning
 
-Code for the anonymous submission *What Should an Unlearned Model Look Like? Counterfactual Targets for
-Entangled Machine Unlearning*.
+Code for the anonymous submission *Overshooting the Oracle: Why Zero Forget Accuracy Is the Wrong Target for Entangled Unlearning*.
 
 **Swift** matches the loss distribution of the forget set $D_f$ to that of a held-out calibration set $D_{cal}$
 (a stop-gradient counterfactual target), while a one-sided Wasserstein constraint keeps the retain set close to a
 cheap retain reference:
 
-$$\min_\theta\; W_2^2\big(P_\ell(D_f;\theta),\, \mathrm{sg}[P_\ell(D_{cal};\theta)]\big)
- + \lambda\,\big[W_2^2\big(P_\ell(D_r;\theta),\, \mathrm{sg}[P_\ell(D_r^{probe};\theta_r^{probe})]\big)\big]_+$$
+\min_{\theta}\;
+W_2^2\left(
+P_\ell(D_f;\theta),
+\operatorname{sg}\left[P_\ell(D_{cal};\theta)\right]
+\right)
++
+\lambda
+\left[
+W_2^2\left(
+P_\ell(D_r;\theta),
+\operatorname{sg}\left[P_\ell(D_r^{probe};\theta_r^{probe})\right]
+\right)
+\right]_+
 
 $\lambda$ is set by dual ascent against a tolerance calibrated to the sampling floor of the retain term, and the
 returned checkpoint is chosen by constrained selection on held-out slices (never on the retrained model).
